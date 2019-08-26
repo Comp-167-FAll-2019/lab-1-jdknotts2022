@@ -83,7 +83,7 @@ public class ContactsApp extends Application {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        loadContacts(args[1]);
+        loadContacts(args[0]);
         launch(args);
     }
     
@@ -93,6 +93,7 @@ public class ContactsApp extends Application {
         ArrayList<String> names = new ArrayList();
         try {
             Scanner contactReader = new Scanner(new File(filename));
+           
             
             while(contactReader.hasNext()) {
                 String[] contactString = contactReader.nextLine().split(",");
